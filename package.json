@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run tsc && cd dist/src && node bot.js",
+    "start": "npm run clean && npm run tsc && npm run launch",
+    "clean": "rm -rf dist",
+    "launch": "cd dist/src && node bot.js",
     "tsc": "tsc"
   },
   "repository": {
