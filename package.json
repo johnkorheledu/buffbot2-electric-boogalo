@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run tsc && cd dist/src && node bot.js",
+    "tsc": "tsc"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,7 @@
   "dependencies": {
     "@types/node": "^14.14.0",
     "discord-akairo": "github:1Computer1/discord-akairo",
-    "discord.js": "github:discordjs/discord.js"
+    "discord.js": "github:discordjs/discord.js",
+    "typescript": "^4.0.5"
   }
 }
