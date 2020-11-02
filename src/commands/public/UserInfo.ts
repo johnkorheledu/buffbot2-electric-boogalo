@@ -23,14 +23,14 @@ export default class PingCommand extends Command {
         user = member.user;
 
         const exampleEmbed = new MessageEmbed()
-	.setColor('#0099ff')
+	.setColor('#c6b878')
 	.setTitle(member.user.username)
 	.setThumbnail(member.user.avatarURL())
 	.addFields(
-        { name: 'Status: ', value: user.presence.activities[0] },
-		{ name: 'Joined discord on: ', value: (member.user.createdAt.getUTCMonth()+1) + '-' + member.user.createdAt.getUTCDate() + '-' + member.user.createdAt.getUTCFullYear(), inline: true },
-        { name: 'Joined server on: ', value: (member.joinedAt.getUTCMonth()+1) + '-' + member.joinedAt.getUTCDate() + '-' + member.joinedAt.getUTCFullYear(), inline: true },
-        { name: 'Roles: ', value: 'Coming soon' },
+        { name: 'Status', value: user.presence.activities[0], inline: true },
+		{ name: 'Joined discord on', value: (member.user.createdAt.getUTCMonth()+1) + '-' + member.user.createdAt.getUTCDate() + '-' + member.user.createdAt.getUTCFullYear(), inline: true },
+        { name: 'Joined server on', value: (member.joinedAt.getUTCMonth()+1) + '-' + member.joinedAt.getUTCDate() + '-' + member.joinedAt.getUTCFullYear(), inline: true },
+        { name: 'Roles', value: 'Coming soon', inline: true },
 	)
 	.setTimestamp()
 	.setFooter('BuffBot 2.0', this.client.user.avatarURL());
